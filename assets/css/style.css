@@ -1,0 +1,154 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+h1,
+h3,
+figure,
+ol {
+    margin: 0;
+}
+
+ol {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media(min-width:768px) {
+    .container {
+        width: 960px;
+    }
+}
+
+.header-container {
+    background-color: rgb(141, 64, 212);
+}
+
+.header {
+    padding: 1.563rem 0;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+@media(min-width:768px) {
+    .header {
+        font-size: 1.063rem;
+    }
+}
+
+.main-content {
+    min-height: 70vh;
+}
+
+.section-header {
+    text-align: center;
+}
+
+.projects {
+    list-style: none;
+    margin-bottom: 1.875rem;
+}
+
+@media(min-width:768px) {
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .625rem;
+        margin: 0 auto;
+    }
+}
+
+.project {
+    position: relative;
+    border-radius: .188rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px #424242;
+    margin-bottom: .625rem;
+}
+
+@media(min-width:768px) {
+    .project {
+        margin-bottom: 0;
+    }
+}
+
+a.project:last-of-type {
+    margin-bottom: 0;
+}
+
+.project img {
+    filter: grayscale(1);
+    transition: all .5s ease-in-out;
+}
+
+.project:hover img {
+    filter: grayscale(0);
+    transform: scale(1.2);
+}
+
+.project-title {
+    position: absolute;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.801);
+    color: #ffffff;
+    padding: .625rem;
+    height: 50%;
+    bottom: -75px;
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+@media(min-width:768px) {
+    .project-title {
+        font-size: .938rem;
+    }
+}
+
+.project:hover .project-title {
+    bottom: -10px;
+    transform: scale(1.2);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.footer figure {
+    width: 20px;
+    margin-left: .625rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
