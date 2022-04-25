@@ -8,10 +8,6 @@
     background-size: 100%;
 }
 
-.card-img-top {
-    width: 100%;
-}
-
 .modal-body {
     display: flex;
     flex-direction: column;
